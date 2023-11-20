@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">GreenThreads</string>
+    <string name="title_activity_main">GreenThreads</string>
+    <string name="package_name">app.greenthreads.com</string>
+    <string name="custom_url_scheme">app.greenthreads.com</string>
+</resources>

@@ -1,0 +1,31 @@
+<ion-menu side="start" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Bienvenido</ion-title>
+      <ion-avatar slot="end" style="width: 38px; height: 38px; margin-right: 120px;">
+        <img src="assets/images/Logo_1.jpg" alt="Imagen pequeña" />
+      </ion-avatar>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-item  *ngFor="let componente of componentes" [routerLink]="[componente.redirecTo]" routerDirection="root" (click)="cerrar()">
+      <ion-icon slot="start" [name]="componente.icon"></ion-icon>
+      <ion-label>{{componente.name}}</ion-label>
+    </ion-item>
+    <ion-item routerLink="/" (click)="cerrar()" routerDirection="root" (click)="cerrarSesion()">
+      <ion-icon slot="start" name="exit-outline"></ion-icon>
+      <ion-label>Cerrar sesión</ion-label>
+    </ion-item>
+  </ion-content>
+</ion-menu>
+
+
+<ion-header>
+  <ion-toolbar  id="main-content">
+    <ion-title>{{titulo}}</ion-title>
+    <ion-buttons slot="start" >
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+

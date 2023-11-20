@@ -1,0 +1,42 @@
+<app-menu titulo="GreenThreads"></app-menu>
+<ion-toolbar>
+    <ion-searchbar placeholder="Buscar producto" animated (input)="searchCustomer($event)" (ionClear)="clearSearch()"></ion-searchbar>
+</ion-toolbar>
+
+<ion-content>
+  <!-- Contenido del carrusel -->
+  <swiper-container class="custom-swiper-container" (slidechange)="swiperSlideChanged($event)" [loop]="true" [pagination]="true">
+    <swiper-slide>
+      <ion-card style="width: 90%; height: 240px; object-fit: cover;">
+        <img src="assets/images/carrusel_4.jpg">
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card style="width: 90%; height: 100%; object-fit: cover;">
+        <img src="assets/images/carrusel_5.png">
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card style="width: 90%; height: 235px; object-fit: cover;">
+        <img src="assets/images/carrusel_3.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- Contenido de los productos -->
+  <ion-item *ngFor="let product of searchUser" class="custom-item">
+    <ion-card style="background-color: #4a5823; color: #ffffff;">
+      <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+      <ion-card-header>
+        <ion-card-title style="color: rgb(255, 255, 255);">{{ product.name }}</ion-card-title>
+        <div style="color: rgb(252, 252, 253);">${{ product.price }}</div>
+      </ion-card-header>
+      <ion-card-content>
+        {{product.description}}
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+</ion-content>
+
+
+

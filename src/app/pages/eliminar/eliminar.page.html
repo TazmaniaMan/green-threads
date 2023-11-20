@@ -1,0 +1,19 @@
+<app-menu titulo="Eliminar"></app-menu>
+<ion-toolbar>
+    <ion-searchbar placeholder="Buscar producto" animated (input)="searchCustomer($event)" (ionClear)="clearSearch()"></ion-searchbar>
+</ion-toolbar>
+<ion-content class="custom-background">
+    <ion-item  *ngFor="let product of searchUser">
+        <ion-card style="background-color: #4a5823; color: #ffffff;">
+            <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header>
+                <ion-card-title style="color: rgb(255, 255, 255);">{{ product.name }}</ion-card-title>
+                <div style="color: rgb(255, 255, 255);">${{ product.price }}</div>
+            </ion-card-header>
+            <ion-card-content>
+                {{product.description}}
+            </ion-card-content>
+            <ion-button expand="full" color="danger" class="text-size" (click)="borrar(product)" routerLink="/home" routerDirection="root">Eliminar</ion-button>
+        </ion-card>
+    </ion-item>
+</ion-content>

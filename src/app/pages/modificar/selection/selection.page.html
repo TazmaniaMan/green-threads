@@ -1,0 +1,20 @@
+<app-menu titulo="Modificar"></app-menu>
+<ion-content class="ion-padding" [fullscreen]="true">
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <ion-list>
+            <ion-input fill="solid" label="Nombre producto" labelPlacement="floating" class="form-control" formControlName="name"></ion-input>
+            <ion-input fill="solid" label="Precio producto" labelPlacement="floating" class="form-control" formControlName="price"></ion-input>
+            <ion-input fill="solid" label="Descripción producto" labelPlacement="floating" class="form-control" formControlName="description"></ion-input>
+            <ion-input fill="solid" label="Imagen producto" labelPlacement="floating" class="form-control" formControlName="image"></ion-input>
+            
+            <ion-row >
+                <ion-col>
+                    <ion-button expand="block" class="text-size" routerLink="/home" routerDirection="root">Cancelar</ion-button>
+                </ion-col>
+                <ion-col>
+                    <ion-button expand="block" class="text-size" type="submit" routerLink="/home" routerDirection="root">Guardar</ion-button>    
+                </ion-col>
+            </ion-row>
+        </ion-list>
+    </form>
+</ion-content>

@@ -1,0 +1,18 @@
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 20vh; /* O ajusta la altura según tus necesidades */
+  }
+
+  .centered-image {
+    max-width: 400px; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 150px; /* Ajusta el tamaño máximo de la imagen */
+  }
+
+  gmp-map {
+    height: 100%;
+  }
+  .custom-title {
+    font-weight: bold;
+  }

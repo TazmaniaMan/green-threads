@@ -1,0 +1,27 @@
+.image-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 20vh; /* O ajusta la altura según tus necesidades */
+  }
+  
+  .centered-image {
+    max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+    max-height: 100px; /* Ajusta el tamaño máximo de la imagen */
+  }
+
+
+  form {
+    background-color: #6b772ccb; /* Cambia "tuColorFormulario" al color que desees */
+    padding: 15px; /* Ajusta según sea necesario */
+    border-radius: 10px; /* Añade esquinas redondeadas si lo deseas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil si lo deseas */
+  }
+
+  ion-header {
+    background-color: #6b772ccb; /* Cambia "tuColor" al color que desees */
+  }
+  
+  ion-title {
+    color: #6b772ccb; /* Cambia "tuColorTexto" al color que desees */
+  }
